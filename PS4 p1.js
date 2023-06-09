@@ -3,7 +3,7 @@ const request = require('request');
 function getWithCallback(callback) {
     const url = 'https://postman-echo.com/get';
 
-    request.get(url, (err, res, body) => {
+    request(url, (err, res, body) => {
         if (err) {
             callback(err); // Pass the error to the callback function
         } else {
