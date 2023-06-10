@@ -1,7 +1,9 @@
 const request = require('request');
 function getWithPromise() {
+
+    const url = 'https://postman-echo.com/get?test=123';
     return new Promise((resolve, reject) => {
-            request('https://postman-echo.com/get?test=123', (err, response, body) => {
+            request(url, (err, response, body) => {
                     if (response) {
                         const data = JSON.parse(body); // Parse the response body
                         resolve(data);
